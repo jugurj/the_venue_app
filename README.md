@@ -2,12 +2,12 @@
 
 Project main dependencies:
 
-### `@material-ui/core@1.2.0`
+### `@material-ui/core`
 
-### `@material-ui/icons@1.1.0`
+### `@material-ui/icons`
 
-### `react-reveal@1.2.2`
+### `react-reveal`
 
-### `react-scroll@1.7.9`
+### `react-scroll`
 
-### `react-slick@0.23.1`
+### `react-slick`
