@@ -10,7 +10,31 @@ import SideDrawer from './SideDrawer';
 class Header extends Component {
 
   state = {
-    drawerOpen: false
+    drawerOpen: false,
+    showHeaderBg: false
+  }
+
+  componentDidMount() {
+    // Vanilla JavaScript to set listener to scrolling event
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    // Remember to remove event listeners if you don't need them
+    window.removeEventListener('scroll');
+  }
+
+  handleScroll = () => {
+    // Check if scroll position is at the top of the page
+    if (window.scrollY > 0) {
+      this.setState({
+        showHeaderBg: true
+      })
+    } else {
+      this.setState({
+        showHeaderBg: false
+      })
+    }
   }
 
   toggleDrawer = (value) => {
@@ -24,7 +48,7 @@ class Header extends Component {
       <AppBar
         position="fixed"
         style={{
-          background: "#2f2f2f",
+          backgroundColor: this.state.showHeaderBg ? "#2f2f2f" : 'transparent',
           boxShadow: 'none',
           padding: '10px 0'
         }}
