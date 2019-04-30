@@ -2,6 +2,7 @@ import React from 'react';
 import './resources/styles.css';
 
 import Header from './components/header_footer/Header';
+import Feature from './components/thumbnail/Feature';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       background: 'pink'
     }}>
     <Header />
+    <Feature/>
     </div>
   );
 }

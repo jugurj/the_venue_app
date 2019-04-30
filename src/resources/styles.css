@@ -76,35 +76,30 @@ footer .footer_copyright {
 
 
 .carrousel_wrapper {
-    height:700px;
+    height: 100vh;
     overflow: hidden;
 }
 
 .carrousel_image {
-    
+    height: 100vh;
     background-size: cover !important;
 }
 
-.artist_name {
+.artist_feature_logo {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 400px;
-    height: 160px;
+    height: 40vh;
     -webkit-transform: translate(-50%, -50%);  
-    transform: translate(-50%, -50%);   
-    border: 2px solid white;
+    transform: translate(-50%, -50%);
 }
 
-.artist_name .wrapper {
-    border: 2px solid white;
-    height: 121px;
-    margin: 6px;
-    text-align: center;
-    color: #fff;
-    font-size: 40px;
-    padding: 21px 70px 0px 70px;
-    text-transform: uppercase;
+.artist_feature_logo img {
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*====================
