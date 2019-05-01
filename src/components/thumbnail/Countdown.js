@@ -4,12 +4,18 @@ import Slide from 'react-reveal/Slide';
 class Countdown extends Component {
 
     state = {
-        componentInViewport: true
+        componentInViewport: true,
+        eventDate: 'Jul, 1, 2019',
+        days: '0',
+        hours: '0',
+        minutes: '0',
+        seconds: '0'
     }
 
     componentDidMount() {
     // Vanilla JavaScript to set listener to scrolling event
         window.addEventListener('scroll', this.handleScroll);
+        setInterval(() => this.getTimeUntilEvent(this.state.eventDate), 1000);
     }
 
     componentWillUnmount() {
@@ -30,7 +36,29 @@ class Countdown extends Component {
         }
     }
 
+    getTimeUntilEvent = (eventDate) => {
+        const dateUntilEvent = Date.parse(eventDate) - Date.parse(new Date());
+
+        if (dateUntilEvent > 0) {
+            const days = Math.floor(dateUntilEvent / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((dateUntilEvent / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((dateUntilEvent / 1000 / 60) % 60);
+            const seconds = Math.floor((dateUntilEvent / 1000) % 60);
+
+            this.setState({
+                days,
+                hours,
+                minutes,
+                seconds
+            })
+        } else {
+            // Event has passed...
+        }
+    }
+
     render() {
+        let { days, hours, minutes, seconds } = this.state;
+
         return (
             <Slide left delay={500} when={this.state.componentInViewport} collapse appear>
                 <div className="countdown_wrapper">
@@ -41,7 +69,7 @@ class Countdown extends Component {
 
                         <div className="countdown_item">
                             <div className="countdown_time">
-                                23
+                                {days}
                             </div>
                             <div className="countdown_tag">
                                 Days
@@ -50,7 +78,7 @@ class Countdown extends Component {
 
                         <div className="countdown_item">
                             <div className="countdown_time">
-                                5
+                                {hours}
                             </div>
                             <div className="countdown_tag">
                                 Hs
@@ -59,7 +87,7 @@ class Countdown extends Component {
 
                         <div className="countdown_item">
                             <div className="countdown_time">
-                                30
+                                {minutes}
                             </div>
                             <div className="countdown_tag">
                                 Min
@@ -68,7 +96,7 @@ class Countdown extends Component {
 
                         <div className="countdown_item">
                             <div className="countdown_time">
-                                00
+                                {seconds}
                             </div>
                             <div className="countdown_tag">
                                 Sec
