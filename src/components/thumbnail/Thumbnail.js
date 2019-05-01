@@ -1,17 +1,19 @@
 import React from 'react';
 import Carrousel from './Carrousel';
+import Countdown from './Countdown';
 
 import feature_logo from '../../resources/images/feature_logo.png';
 
-const Feature = () => {
+const Thumbnail = () => {
     return (
         <div>
             <Carrousel/>
             <div className="artist_feature_logo">
                 <img src={feature_logo} alt="Rammstein band featuring logo"/>
             </div>
+            <Countdown/>
         </div>
     );
 };
 
-export default Feature;
+export default Thumbnail;

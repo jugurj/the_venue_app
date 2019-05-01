@@ -113,7 +113,7 @@ footer .footer_copyright {
 }
 
 .countdown_wrapper .countdown_top {
-    background: #ff4800;
+    background: #f44336;
     font-size: 19px;
     padding: 10px;
     display: inline-block;
@@ -122,7 +122,7 @@ footer .footer_copyright {
 
 .countdown_wrapper .countdown_bottom {
     display: flex;
-    background: #d93d00;
+    background: #1d1d1d;
     padding: 10px 20px;
 }
 
