@@ -16,7 +16,10 @@ const Carrousel = () => {
 
     return (
         <div className="carrousel_wrapper">
-            <Slider {...settings}>
+            <Slider {...settings}
+                draggable={false}
+                pauseOnHover={false}
+            >
                 <div>
                     <div className="carrousel_image" style={{
                         background: `url(${slide_one})`
