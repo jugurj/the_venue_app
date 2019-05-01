@@ -4,7 +4,6 @@ import Slide from 'react-reveal/Slide';
 class Countdown extends Component {
 
     state = {
-        componentInViewport: true,
         eventDate: 'Jul, 1, 2019',
         days: '0',
         hours: '0',
@@ -13,27 +12,7 @@ class Countdown extends Component {
     }
 
     componentDidMount() {
-    // Vanilla JavaScript to set listener to scrolling event
-        window.addEventListener('scroll', this.handleScroll);
         setInterval(() => this.getTimeUntilEvent(this.state.eventDate), 1000);
-    }
-
-    componentWillUnmount() {
-    // Remember to remove event listeners if you don't need them
-        window.removeEventListener('scroll');
-    }
-
-    handleScroll = () => {
-    // Check if scroll position in thumbnail viewport
-        if (window.scrollY < window.innerHeight - 50) {
-            this.setState({
-                componentInViewport: true
-            })
-        } else {
-            this.setState({
-                componentInViewport: false
-            })
-        }
     }
 
     getTimeUntilEvent = (eventDate) => {
@@ -60,7 +39,7 @@ class Countdown extends Component {
         let { days, hours, minutes, seconds } = this.state;
 
         return (
-            <Slide left delay={500} when={this.state.componentInViewport} collapse appear>
+            <Slide left delay={1000}>
                 <div className="countdown_wrapper">
                     <div className="countdown_top">
                         Event starts in

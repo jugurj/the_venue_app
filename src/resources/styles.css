@@ -20,10 +20,10 @@ body {
     background: #ffffff;
 }
 .bck_red {
-    background: #ff4800;
+    background: #f44336;
 }
 .bck_yellow {
-    background: #ffa800;
+    background: #EAC435;
 }
 
 .iconImage {
@@ -33,7 +33,7 @@ body {
 
 .center_wrapper {
     width: 900px;
-    margin:0 auto;
+    margin: 0 auto;
 }
 
 

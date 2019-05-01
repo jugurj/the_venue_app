@@ -3,6 +3,7 @@ import './resources/styles.css';
 
 import Header from './components/header_footer/Header';
 import Thumbnail from './components/thumbnail/Thumbnail';
+import VenueInfo from './components/venue_info/VenueInfo';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     }}>
     <Header />
     <Thumbnail/>
+    <VenueInfo/>
     </div>
   );
 }
