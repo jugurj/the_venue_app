@@ -2,7 +2,7 @@ import React from 'react';
 import Carrousel from './Carrousel';
 import Countdown from './Countdown';
 
-import feature_logo from '../../resources/images/feature_logo.png';
+import feature_logo from '../../resources/images/feature_logo.svg';
 
 const Thumbnail = () => {
     return (
