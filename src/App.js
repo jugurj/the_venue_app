@@ -5,6 +5,7 @@ import Header from './components/header_footer/Header';
 import Thumbnail from './components/thumbnail/Thumbnail';
 import VenueInfo from './components/venue_info/VenueInfo';
 import Highlights from './components/highlights/Highlights';
+import Pricing from './components/pricing/Pricing';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
     <Thumbnail/>
     <VenueInfo/>
     <Highlights/>
+    <Pricing/>
     </div>
   );
 }
