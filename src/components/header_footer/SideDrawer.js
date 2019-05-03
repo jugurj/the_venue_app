@@ -1,4 +1,5 @@
 import React from 'react';
+import { scroller } from 'react-scroll';
 
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
@@ -14,6 +15,17 @@ import LocationIcon from '@material-ui/icons/LocationOn';
 
 
 const SideDrawer = (props) => {
+
+  const scrollToSection = (section) => {
+    scroller.scrollTo(section, {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+      offset: -150
+    });
+    props.onClose(false)
+  }
+
   return (
     <div>
       <Drawer
@@ -22,35 +34,35 @@ const SideDrawer = (props) => {
         onClose={() => props.onClose(false)}
       >
           <List component="nav">
-              <ListItem button onClick={() => console.log('Featured')}>
+              <ListItem button onClick={() => scrollToSection('featured')}>
                 <ListItemIcon>
                     <TimeIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Event Time" />
               </ListItem>
 
-              <ListItem button onClick={() => console.log('Venue Info')}>
+              <ListItem button onClick={() => scrollToSection('venue_info')}>
                 <ListItemIcon>
                     <InfoIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Venue Info" />
               </ListItem>
 
-              <ListItem button onClick={() => console.log('Highlights')}>
+              <ListItem button onClick={() => scrollToSection('highlights')}>
                 <ListItemIcon>
                     <HighlightIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Highlights" />
               </ListItem>
 
-              <ListItem button onClick={() => console.log('Pricing')}>
+              <ListItem button onClick={() => scrollToSection('pricing')}>
                 <ListItemIcon>
                     <PriceIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Pricing" />
               </ListItem>
 
-              <ListItem button onClick={() => console.log('Location')}>
+              <ListItem button onClick={() => scrollToSection('location')}>
                 <ListItemIcon>
                     <LocationIcon/>
                 </ListItemIcon>

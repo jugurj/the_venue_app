@@ -1,5 +1,6 @@
 import React from 'react';
 import './resources/styles.css';
+import { Element } from 'react-scroll';
 
 import Header from './components/header_footer/Header';
 import Thumbnail from './components/thumbnail/Thumbnail';
@@ -13,11 +14,21 @@ function App() {
   return (
     <div className="App">
     <Header />
-    <Thumbnail/>
-    <VenueInfo/>
-    <Highlights/>
-    <Pricing/>
-    <Location/>
+    <Element name="featured">
+      <Thumbnail/>
+    </Element>
+    <Element name="venue_info">
+      <VenueInfo/>
+    </Element>
+    <Element name="highlights">
+      <Highlights/>
+    </Element>
+    <Element name="pricing">
+      <Pricing/>
+    </Element>
+    <Element name="location">
+      <Location/>
+    </Element>
     <Footer/>
     </div>
   );

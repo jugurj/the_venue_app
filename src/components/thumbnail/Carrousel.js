@@ -19,6 +19,7 @@ const Carrousel = () => {
             <Slider {...settings}
                 draggable={false}
                 pauseOnHover={false}
+                useTransform={false}
             >
                 <div>
                     <div className="carrousel_image" style={{
