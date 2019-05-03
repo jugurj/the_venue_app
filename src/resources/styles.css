@@ -9,7 +9,7 @@ body {
     font-family: 'Righteous', cursive;
 }
 
-.font-frijole {
+.font_frijole {
     font-family: 'Frijole', cursive;
 }
 
@@ -29,6 +29,7 @@ body {
 .iconImage {
     width: 20px;
     margin-right: 10px;
+    color: #111111;
 }
 
 .center_wrapper {
