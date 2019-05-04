@@ -90,6 +90,18 @@ footer .footer_copyright {
     font-size: 18px;
 }
 
+@media only screen and (max-width: 600px) {
+
+    footer {
+        font-size: 40px;
+        padding: 30px 0px;
+    }
+    
+    footer .footer_copyright {
+        font-size: 12px;
+    }
+}
+
 /*====================
         CARROUSEL
 ======================*/
@@ -176,7 +188,7 @@ footer .footer_copyright {
 @media only screen and (max-width: 600px) {
 
     .countdown_wrapper {
-        width: 100vw;
+        width: 100%;
     }
 
     .countdown_wrapper .countdown_top {
@@ -266,7 +278,7 @@ footer .footer_copyright {
     margin-bottom: 90px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 914px) {
 
     .center_wrapper {
         width: 0;
@@ -283,6 +295,10 @@ footer .footer_copyright {
         margin: 50px auto;
         width: auto;
     }
+
+}
+
+@media only screen and (max-width: 600px) {
 
     .vn_item .vn_outer {
         width: 250px;
@@ -372,6 +388,57 @@ footer .footer_copyright {
     font-weight: 300;
 }
 
+@media only screen and (max-width: 1000px) {
+
+    .discount_wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .highlight_wrapper .highlight_description {
+        font-size: 14px;
+        padding: 30px 30px;
+    }
+
+    .discount_wrapper .discount_porcentage {
+        padding-right: 0;
+        margin: 0 auto;
+    }
+
+    .discount_wrapper .discount_description h3 {
+        padding: 60px 30px 10px 30px;
+    }
+    
+    .discount_wrapper .discount_description p { 
+        padding: 0px 30px 30px 30px;
+    }
+
+    .discount_wrapper .discount_description div {
+        padding-left: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .highlight_wrapper h2 {
+        font-size: 30px;
+    }
+
+    .discount_wrapper .discount_description h3 {
+        font-size: 28px;
+    }
+    
+    .discount_wrapper .discount_description p { 
+        font-size: 14px;
+
+    }
+
+    .discount_wrapper .discount_description div {
+        padding-left: 30px;
+    }
+}
+
 /*====================
         PRICING
 ======================*/
@@ -394,6 +461,7 @@ footer .footer_copyright {
     display: flex;
     flex-wrap: wrap;
 }
+
 .pricing_wrapper .pricing_item {
     flex-grow: 1;
     width: 33%;
@@ -412,15 +480,18 @@ footer .footer_copyright {
     border-bottom: 1px solid #EAC435;
     padding-bottom: 20px;
 }
+
 .pricing_inner_wrapper .pricing_title span:nth-child(1) {
     font-size: 50px;
     display: block;
 }
+
 .pricing_inner_wrapper .pricing_title span:nth-child(2) {
     text-transform: uppercase;
     font-size: 28px;
     font-weight: 300;
 }
+
 .pricing_inner_wrapper .pricing_description {
     color: #b8b8b8;
     font-weight: 300;
@@ -434,6 +505,43 @@ footer .footer_copyright {
      text-align: center;
 }
 
+@media only screen and (max-width: 914px) {
+
+    .pricing_wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .pricing_wrapper .pricing_item {
+        width: 100%;
+        padding: 30px 0px;
+    }
+
+    .pricing_wrapper .pricing_inner_wrapper {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .pricing_section h2 {
+        font-size: 30px;
+    }
+
+    .pricing_wrapper .pricing_inner_wrapper {
+        width: 220px;
+    }
+
+    .pricing_inner_wrapper .pricing_title span:nth-child(1) {
+        font-size: 40px;
+    }
+
+    .pricing_inner_wrapper .pricing_title span:nth-child(2) {
+        font-size: 20px;
+    }
+}
 
 /*====================
         LOCATION    
@@ -448,6 +556,7 @@ footer .footer_copyright {
     bottom: 0px;
     width: 100%;
 }
+
 .location_tag div{
     background: #2c2c2c;
     color: #ffffff;
@@ -457,4 +566,12 @@ footer .footer_copyright {
     font-size: 29px;
     padding: 15px 20px;
     text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .location_tag div{
+        width: 140px;
+        font-size: 20px;
+    }
 }
