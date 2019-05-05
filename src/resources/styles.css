@@ -17,6 +17,10 @@ body {
     font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
 
+.font_gloria {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
 .bck_black {
     background: #3c3c3c;
 }
@@ -61,6 +65,7 @@ header .header_logo_venue {
 
 header .header_logo_title {
     text-transform: uppercase;
+    padding-left: 60px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -91,6 +96,10 @@ footer .footer_copyright {
 }
 
 @media only screen and (max-width: 600px) {
+
+    header .header_logo_title {
+        padding-left: 30px;
+    }
 
     footer {
         font-size: 40px;
@@ -196,7 +205,7 @@ footer .footer_copyright {
     }
 
     .countdown_wrapper .countdown_time {
-        font-size: 40px;
+        font-size: 30px;
         padding-right: 30px;
     }
 
@@ -421,8 +430,14 @@ footer .footer_copyright {
 
 @media only screen and (max-width: 600px) {
 
+    .highlight_wrapper .highlight_description {
+        border-top: none;
+        border-bottom: none;
+    }
+
     .highlight_wrapper h2 {
         font-size: 30px;
+        padding-top: 30px;
     }
 
     .discount_wrapper .discount_description h3 {
